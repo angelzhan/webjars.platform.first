@@ -1,0 +1,28 @@
+.my-simple-form-title {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+.my-simple-form {
+    margin-bottom: 10px;
+}
+
+.my-simple-form-title i.iconfont {
+    font-size: 22px!important;
+}
+
+.my-simple-form table {
+    table-layout: fixed;
+}
+
+.my-simple-form th {
+    width: 80px;
+}
+
+.my-simple-form td {
+    width: 400px;
+}

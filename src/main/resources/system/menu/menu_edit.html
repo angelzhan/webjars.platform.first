@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../js/iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+<div class="my-simple-form-div menu-form-div">
+    <div class="my-page-top-blank">
+    </div>
+    <div class="my-simple-form-title">
+        <i class="iconfont">&#xe790;</i> 菜单编辑
+    </div>
+    <form class="my-simple-form" id="menu-form">
+        <table>
+            <tr>
+                <th>
+                    <label class="my-simple-form-label">名称</label>
+                </th>
+                <td>
+                    <input class="mini-textbox" id="menu-name" name="menuName" style="width: 100%">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label class="my-simple-form-label">URL</label>
+                </th>
+                <td>
+                    <input class="mini-textbox" id="menu-url" name="url" style="width: 100%" value="/">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label class="my-simple-form-label">权限</label>
+                </th>
+                <td>
+                    <input class="mini-textbox" id="menu-perm" name="perms" style="width: 100%">
+                </td>
+            </tr>
+        </table>
+        <input class="mini-textbox" id="menu-id" name="menuID" style="width: 100%; display: none">
+    </form>
+    <button class="my-btn" onclick="save()">保存</button>
+</div>
+<script src="../../js/boot.js"></script>
+<script src="../../js/platformUtil.js"></script>
+<script src="script/menu_edit.js"></script>
+</body>
+</html>

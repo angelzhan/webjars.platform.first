@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色绑定列表</title>
+    <link rel="stylesheet" href="../../css/miniui.css">
+</head>
+<body>
+<div id="layout1" class="mini-layout" style="width:100%;height:100%;" splitSize="0"
+     borderStyle="border:solid 1px #aaa;">
+    <div title="north" region="north" height="40" showSplitIcon="false" showHeader="false">
+        <div class="mini-toolbar" style="border-bottom: 0; padding: 0px;">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 100%;" id="buttons">
+                        <button class="my-btn" onclick="save_()">保存</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--撑满页面-->
+    <div title="center" region="center">
+        <div class="mini-fit">
+            <table>
+                <tr>
+                    <td>可选角色
+                        <div id="unSelectList" class="mini-listbox" style="width:200px;height:500px;"
+                             textField="roleName" valueField="roleID" showCheckBox="true" multiSelect="true">
+                        </div>
+                    </td>
+                    <td style="width:120px;text-align:center;">
+                        <input class="my-btn" type="button" value=">" onclick="add_()"
+                               style="width:40px; margin-bottom: 10px"/><br/>
+                        <input class="my-btn" type="button" value=">>" onclick="addAll_()"
+                               style="width:40px; margin-bottom: 10px"/><br/>
+                        <input class="my-btn" type="button" value="&lt;&lt;" onclick="removeAll_()"
+                               style="width:40px; margin-bottom: 10px"/><br/>
+                        <input class="my-btn" type="button" value="&lt;" onclick="remove_()"
+                               style="width:40px; margin-bottom: 10px"/><br/>
+                    </td>
+                    <td>已选角色
+                        <div id="selectedList" class="mini-listbox" style="width:200px;height:500px;"
+                             textField="roleName" valueField="roleID" showCheckBox="true" multiSelect="true">
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+<script src="../../js/boot.js"></script>
+<script src="../../js/platformUtil.js"></script>
+<script src="script/role_bind.js"></script>
+</body>
+</html>

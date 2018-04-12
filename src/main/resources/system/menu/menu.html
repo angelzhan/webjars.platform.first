@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单管理</title>
+    <link rel="stylesheet" href="../../css/miniui.css">
+</head>
+<body>
+<div class="mini-splitter" style="width:100%;height:100%;">
+    <div size="250" minSize="200" maxSize="350" showCollapseButton="true">
+        <ul id="tree1" class="mini-tree" style="width:100%;height:100%;"
+            showTreeIcon="true" textField="menuName" onbeforeload="onBeforeTreeLoad" onNodeclick="onNodeclick"
+            idField="menuID" parentField="parentID" resultAsTree="false" contextMenu="#menu"></ul>
+
+        <ul id="menu" class="mini-contextmenu" onbeforeopen="onBeforeOpen">
+            <li onclick="addMenu()" id="menu-add">新建</li>
+            <li onclick="removeMenu()" id="menu-remove">删除</li>
+            <li onclick="bindGroup()" id="menu-role">角色设置</li>
+        </ul>
+    </div>
+    <div showCollapseButton="true">
+        <iframe id="menu-iframe" style="width: 100%; height: 100%; display: inherit" frameborder="0">
+
+        </iframe>
+    </div>
+</div>
+<script src="../../js/boot.js"></script>
+<script src="../../js/platformUtil.js"></script>
+<script src="script/menu.js"></script>
+</body>
+</html>

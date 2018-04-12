@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色管理</title>
+    <link rel="stylesheet" href="../../css/miniui.css">
+</head>
+<body>
+<div class="mini-fit">
+    <div class="mini-toolbar" style="border-bottom:0;padding:0px;">
+        <table style="width:100%;">
+            <tr>
+                <td style="width:100%;">
+                    <a class="mini-button" iconCls="icon-add" onclick="addRole()" plain="true">增加</a>
+                    <a class="mini-button" iconCls="icon-save" onclick="saveRole()" plain="true">保存</a>
+                </td>
+                <td style="white-space:nowrap;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="mini-fit">
+        <div id="dataGrid" class="mini-datagrid" style="height:100%;" idField="roleID" allowResize="false"
+             pageSize="20" allowCellEdit="true" allowCellSelect="true" editNextOnEnterKey="true"
+             editNextRowCell="true">
+            <div property="columns">
+                <div type="indexcolumn" width="50"></div>
+                <div name="roleName" field="roleName" headerAlign="center" width="150">角色名
+                    <input property="editor" class="mini-textbox"/>
+                </div>
+                <div name="remark" field="remark" headerAlign="center">备注
+                    <input property="editor" class="mini-textbox"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/boot.js"></script>
+<script src="../../js/platformUtil.js"></script>
+<script src="script/role.js"></script>
+</body>
+</html>

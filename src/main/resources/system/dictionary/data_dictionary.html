@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据字典</title>
+    <link rel="stylesheet" href="../../js/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../../css/miniui.css">
+    <link rel="stylesheet" href="../../css/skin.css">
+</head>
+<body>
+<div class="my-mini-grid-main-div">
+    <div class="my-page-top-blank"></div>
+    <div class="my-grid-title-div" id="my-grid-title-div">
+        <div class="my-grid-title-content">
+            <i class="iconfont my-grid-title-icon">&#xe602;</i>
+            <div class="my-grid-title-text" id="dfzUser">
+                数据字典
+            </div>
+        </div>
+        <div class="my-grid-title-btn">
+            <button class="my-btn" onclick="addData()">增加</button>
+            <button class="my-btn" onclick="deleteData()">删除</button>
+            <button class="my-btn" onclick="saveData()">保存</button>
+            <button class="my-btn" onclick="reloadData()">刷新</button>
+        </div>
+    </div>
+    <!--<div class="mini-fit">-->
+    <!--<div class="mini-toolbar" style="border-bottom:0;padding:0px;">-->
+    <!--<table style="width:100%;">-->
+    <!--<tr>-->
+    <!--<td style="width:100%;">-->
+    <!--<a class="mini-button" iconCls="icon-add" onclick="addUser()" plain="true">增加</a>-->
+    <!--<a class="mini-button" iconCls="icon-reload" onclick="reLoadUser()" plain="true">刷新</a>-->
+    <!--<a class="mini-button" iconCls="icon-save" onclick="saveUser()" plain="true">保存</a>-->
+    <!--<span class="separator"></span>-->
+    <!--<a class="mini-button" iconCls="icon-user" onclick="assignRole()" plain="true">权限分配</a>-->
+    <!--</td>-->
+    <!--<td style="white-space:nowrap;">-->
+    <!--</td>-->
+    <!--</tr>-->
+    <!--</table>-->
+    <!--</div>-->
+    <div class="mini-fit">
+        <div id="dataGrid" class="mini-datagrid" style="width: 100%;height:100%;" idField="userID" allowResize="false"
+             pageSize="20" allowCellEdit="true" allowCellSelect="true" editNextOnEnterKey="true"
+             editNextRowCell="true">
+            <div property="columns">
+                <div type="checkcolumn" width="50"></div>
+                <div type="indexcolumn" width="50"></div>
+                <div name="name" field="name" headerAlign="center" width="20%">名称
+                    <input property="editor" class="mini-textbox"/>
+                </div>
+                <div name="value" field="value" headerAlign="center" width="20%">值
+                    <input property="editor" class="mini-textbox"/>
+                </div>
+                <div name="remark" field="remark" headerAlign="center" width="60%">备注
+                    <input property="editor" class="mini-textbox"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-page-bottom-blank"></div>
+    <!--</div>-->
+</div>
+<script src="../../js/boot.js"></script>
+<script src="../../js/platformUtil.js"></script>
+<script src="script/data_dictionary.js"></script>
+</body>
+</html>
