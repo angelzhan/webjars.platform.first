@@ -13,7 +13,7 @@ $(function () {
  * 获取当前用户
  */
 function getCurrentUser() {
-    var userData = binfo.util.user.getCurrentUser();
+    var userData = platform.user.getCurrentUser();
     var userName = userData.userName;
     $("#username").text(userName);
 }
@@ -22,7 +22,7 @@ function getCurrentUser() {
  * 获取项目名称
  */
 function getProjectName() {
-    var result = binfo.net.ajaxData("post", "/dictionary/get/系统名称", {});
+    var result = binfo.net.ajaxData("post", "/dictionary/get/系统配置/系统名称", {});
     if (result.status) {
         $("#title").html(result.data.value);
     }
@@ -78,12 +78,4 @@ function getSecondMenu(parentID) {
  */
 function turnPage(url) {
     $("#main-page").attr("src", binfo.util.net.getURL() + url);
-}
-
-/**
- * 退出
- */
-function logOff() {
-    //TO-DO 清除shiro的缓存信息
-    window.top.location.href = binfo.util.net.getURL() + "/login.html";
 }

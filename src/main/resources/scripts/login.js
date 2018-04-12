@@ -22,7 +22,7 @@ window.onload = function () {
 };
 
 $(function () {
-    var result = binfo.net.ajaxData("post","/dictionary/get/系统名称",{});
+    var result = binfo.net.ajaxData("post","/dictionary/get/系统配置/系统名称",{});
     if (result.status) {
         $("#project-name").html(result.data.value);
     }
