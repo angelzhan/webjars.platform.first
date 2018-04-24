@@ -41,9 +41,9 @@ function getMenu() {
             var menuName = menuData[i].menuName;
             var url = menuData[i].url;
             str += "<li class='layui-nav-item layui-nav-itemed'>" +
-                "    <a class='javascript:;' href='javascript:;'";
-            if (url != "/") {
-                str += " onclick='turnPage(\'" + url + "\')'";
+                "    <a class='javascript:;' href='javascript:;' ";
+            if (url !== "/") {
+                str += " onclick='turnPage(\""+url+"\")' ";
             }
             str += ">" + menuName + "   <span class='layui-nav-more'></span>" +
                 "</a>" +
