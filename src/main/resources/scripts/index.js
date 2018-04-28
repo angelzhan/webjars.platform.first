@@ -79,3 +79,15 @@ function getSecondMenu(parentID) {
 function turnPage(url) {
     $("#main-page").attr("src", binfo.util.net.getURL() + url);
 }
+
+/**
+ * 支持mini弹窗位于系统最顶层
+ * @param param
+ */
+function openMiniWindow(param) {
+    if (window != window.top) {
+        window.top.openMiniWindow(param);
+    } else {
+        mini.open(param);
+    }
+}
