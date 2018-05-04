@@ -21,11 +21,17 @@ function addUser() {
 
 function saveUser() {
     var data = grid.getChanges();
-    binfo.net.asyncAjaxData("post", "/user/add", {
+    var resultData = binfo.net.ajaxData("post", "/user/add", {
         data: data
-    }, function (data) {
-        grid.reload();
     });
+    if (resultData.status){
+        grid.reload();
+    }else{
+        alert("保存失败，请坚持登录名是否有重复")
+    }
+    // binfo.net.asyncAjaxData(, function (data) {
+
+    // });
 }
 
 function reLoadUser() {

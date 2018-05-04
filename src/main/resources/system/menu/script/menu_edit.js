@@ -14,7 +14,7 @@ $(function () {
 function init() {
     form = new mini.Form("menu-form");
     urlInput = mini.get('menu-url');
-    if ("update" == type) {
+    if ("update" === type) {
         // if (!isLeaf) {
         //     urlInput.disable();
         // }
@@ -23,7 +23,7 @@ function init() {
 }
 
 function getMenuInfo(id) {
-    binfo.net.asyncAjaxData("post","/menu/getMenuInfo", {
+    binfo.net.asyncAjaxData("post", "/menu/getMenuInfo", {
         menuID: id
     }, function (data) {
         if (data.status) {
@@ -34,7 +34,7 @@ function getMenuInfo(id) {
 }
 
 function save() {
-    if ("update" == type) {
+    if ("update" === type) {
         updateMenuInfo();
     } else {
         saveMenu();
@@ -42,7 +42,7 @@ function save() {
 }
 
 function updateMenuInfo() {
-    binfo.net.asyncAjaxData("post","/menu/updateNameAndUrl", form.getData(), function (data) {
+    binfo.net.asyncAjaxData("post", "/menu/updateNameAndUrl", form.getData(), function (data) {
         if (data.status) {
             alert("success!");
             window.parent.reloadParentNodeBySelected();
@@ -54,10 +54,11 @@ function saveMenu() {
     var info = form.getData();
     info.level = binfo.util.URL.getQueryString("level");
     info.parentID = pid;
-    binfo.net.asyncAjaxData("post","/menu/add", info, function (data) {
+    binfo.net.asyncAjaxData("post", "/menu/add", info, function (data) {
         if (data.status) {
-            alert("success!");
             window.parent.reloadSelected();
+        } else {
+            alert(data.data);
         }
     })
 }

@@ -6,7 +6,7 @@
 
     <groupId>com.binfo.platform</groupId>
     <artifactId>webjars.platfrom.first</artifactId>
-    <version>1.0.9</version>
+    <version>1.0.10-SNAPSHOT</version>
 
     <build>
         <resources>
