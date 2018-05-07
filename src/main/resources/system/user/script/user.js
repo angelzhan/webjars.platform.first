@@ -2,7 +2,7 @@ var grid;
 $(function () {
     mini.parse();
     grid = mini.get("dataGrid");
-    grid.setUrl(binfo.util.net.getURL()+"/user/getUserInfo");
+    grid.setUrl(binfo.util.net.getURL() + "/user/getUserInfo");
     grid.load();
     grid.on("beforeload", function (e) {
         if (grid.getChanges().length > 0) {
@@ -24,14 +24,11 @@ function saveUser() {
     var resultData = binfo.net.ajaxData("post", "/user/add", {
         data: data
     });
-    if (resultData.status){
+    if (resultData.status) {
         grid.reload();
-    }else{
-        alert("保存失败，请坚持登录名是否有重复")
+    } else {
+        alert("保存失败，请坚持登录名是否有重复");
     }
-    // binfo.net.asyncAjaxData(, function (data) {
-
-    // });
 }
 
 function reLoadUser() {
@@ -41,8 +38,8 @@ function reLoadUser() {
 function assignRole() {
     var data = grid.getSelected();
     mini.open({
-        url:binfo.util.net.getURL()+"/system/user/role_bind.html?type=user&id="+data.userID,
-        width:400,
-        height:600
+        url: binfo.util.net.getURL() + "/system/user/role_bind.html?type=user&id=" + data.userID,
+        width: 500,
+        height: 600
     });
 }

@@ -2,24 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="js/iconfont/iconfont.css">
     <link rel="stylesheet" href="css/login.css">
     <title>登录</title>
 </head>
 <body>
-<div class="main-div">
-    <div class="title-div">
-        <p id="project-name"></p>
+<div class="wrap">
+    <div class="header">
+        <div class="logo"></div>
+        <div class="title" id="title"></div>
     </div>
-    <div class="input-div">
-        <table>
-            <tr>
-                <td colspan="4"><input id="username" name="username" type="text" placeholder="请输入用户名"/></td>
-                <td colspan="4"><input id="password" name="password" type="password" placeholder="请输入密码"/></td>
-                <td colspan="2"><input id="login" type="button" onclick="login()" value="登录"/></td>
-            </tr>
-        </table>
+    <div class="main">
+        <div class="content">
+            <div class="content-row">
+                <i class="iconfont login-icon">&#xe97f;</i>
+                <input id="username" name="username" type="text" placeholder="请输入用户名"/>
+            </div>
+            <div class="content-line"></div>
+            <div class="content-row">
+                <i class="iconfont login-icon">&#xe95a;</i>
+                <input id="password" name="password" type="password" placeholder="请输入密码"/>
+            </div>
+            <div class="content-line"></div>
+            <!--<div class="content-row">-->
+                <!--<input type="checkbox" title="记住密码">-->
+                <!--<i content="iconfont login-icon">&#xe93a;</i>-->
+                <!--<span>记住密码</span>-->
+            <!--</div>-->
+            <div class="content-row">
+                <input id="login" class="login" type="button" onclick="login()" value="登录"/>
+            </div>
+        </div>
     </div>
-    <div class="footer"></div>
+    <div class="footer">
+        Copyright © 江苏秉信科技有限公司版权所有
+    </div>
 </div>
 <script src="webjars/js/jquery-1.11.3.js"></script>
 <script src="js/platformUtil.js"></script>

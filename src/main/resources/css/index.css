@@ -1,22 +1,21 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: '微软雅黑', '黑体', Verdana, sans-serif, '宋体', serif!important;
+    font-size: 14px;
+    font-family: '微软雅黑', '黑体', Verdana, sans-serif, '宋体', serif !important;
 }
 
-div.logo {
-    width: 220px;
-    height: 70px;
-    background: url("../image/logo.png") no-repeat center;
+a {
+    color: white;
 }
 
 div.title {
     position: absolute;
-    left: 250px;
+    left: 189px;
     top: 0;
     width: auto;
-    height: 70px;
-    line-height: 70px;
+    height: 64px;
+    line-height: 64px;
     color: white;
     font-size: 25px;
     font-family: '微软雅黑', '黑体', Verdana, sans-serif, '宋体', serif;
@@ -24,10 +23,10 @@ div.title {
 
 div.user-info {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 10px;
-    height: 70px;
-    line-height: 70px;
+    height: 64px;
+    line-height: 64px;
 }
 
 div.user-info ul {
@@ -37,19 +36,9 @@ div.user-info ul {
 
 div.user-info li {
     float: left;
-    height: 70px;
-    line-height: 70px;
+    height: 64px;
+    line-height: 64px;
     margin-left: 10px;
-}
-
-div.user-info li i.iconfont {
-    color: white;
-    font-size: 30px;
-}
-
-div.user-info li a.iconfont {
-    color: white;
-    font-size: 30px;
 }
 
 div.user-info li span {
@@ -57,12 +46,49 @@ div.user-info li span {
     color: white;
 }
 
-#logOff{
+#logOff {
     cursor: pointer;
 }
 
-#main-page{
+#main-page {
     width: 100%;
     height: 99%;
     overflow: hidden;
+}
+
+.header {
+    height: 64px;
+    background: url("../images/header-background.png") repeat;
+}
+
+.logo {
+    width: 160px;
+    height: 46px;
+    position: absolute;
+    top: 8px;
+    background: url("../images/index-logo.png") no-repeat;
+}
+
+.background {
+    width: 497px;
+    height: 60px;
+    position: absolute;
+    left: 40%;
+    background: url("../images/header-pic.png");
+}
+
+.user-icon {
+    font-size: 18px;
+    color: white;
+}
+
+.split-line {
+    margin-top: 24px;
+    width: 2px;
+    height: 16px;
+    background-color: #ffffff;
+}
+
+.layui-layout-admin .layui-body{
+    bottom: 0;
 }

@@ -22,9 +22,9 @@ window.onload = function () {
 };
 
 $(function () {
-    var result = binfo.net.ajaxData("post","/dictionary/get/系统配置/系统名称",{});
+    var result = binfo.net.ajaxData("post", "/dictionary/get/系统配置/系统名称", {});
     if (result.status) {
-        $("#project-name").html(result.data.value);
+        $(".title").html(result.data.value);
     }
 });
 
@@ -39,7 +39,6 @@ function login() {
         password: password
     }, function (data) {
         if (data.status) {
-            console.log(data);
             window.location = binfo.util.net.getURL() + "/index.html";
         } else {
             alert(data.data);

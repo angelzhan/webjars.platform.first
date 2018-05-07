@@ -40,19 +40,25 @@ function getMenu() {
             var menuID = menuData[i].menuID;
             var menuName = menuData[i].menuName;
             var url = menuData[i].url;
-            str += "<li class='layui-nav-item layui-nav-itemed'>" +
-                "    <a class='javascript:;' href='javascript:;' ";
+
             if (url !== "/") {
-                str += " onclick='turnPage(\""+url+"\")' ";
+                str += "<li class='layui-nav-item'>" +
+                    "       <a class='javascript:;' href='javascript:;' onclick='turnPage(\"" + url + "\")'>" + menuName + "</a>" +
+                    "   </li>";
+            } else {
+                str += "<li class='layui-nav-item layui-nav-itemed'>" +
+                    "       <a class='javascript:;' href='javascript:;'>" + menuName +
+                    "           <span class='layui-nav-more'></span>" +
+                    "       </a>" +
+                    "       <dl class='layui-nav-child'>";
+                str += getSecondMenu(menuID);
+                str += "    </dl>" +
+                    "   </li>";
             }
-            str += ">" + menuName + "   <span class='layui-nav-more'></span>" +
-                "</a>" +
-                "    <dl class='layui-nav-child'>";
-            str += getSecondMenu(menuID);
-            str += "</dl></li>";
+            // str += " onclick='turnPage(\""+url+"\")' ";
         }
-        str += "</ul>";
     }
+    str += "</ul>";
     $("#leftNav").append(str);
 }
 
